@@ -6,7 +6,7 @@
     "image": "https://tosellihogar.com.ar/wp-content/uploads/2023/01/4682-8.jpg",
     "stock": 5,
     "condition": "new",
-    "price": 2
+    "price": 180
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_927143-MLA42003898015_052020-F.webp",
     "stock": 6,
     "condition": "new",
-    "price": 323
+    "price": 5
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "image": "https://ar.wiautomation.com/public/images/landing/anticipa/product/ixr5kSQBju7Pi7pvKubx0cCQDzxzM0xa3Hlr00yP7SF08CUNTw2NwdbmOqJl.jpg",
     "stock": 6,
     "condition": "new",
-    "price": 433
+    "price": 90
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "image": "https://s1.eestatic.com/2021/11/18/elandroidelibre/moviles-android/628198853_215362143_1706x960.jpg",
     "stock": 4,
     "condition": "new",
-    "price": 532
+    "price": 232
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "image": "https://front.dev.malditohard.com.ar/img/migration/APPLE--IPHONE-13-PRO-512GB-GREEN.webp",
     "stock": 20,
     "condition": "new",
-    "price": 24
+    "price": 890
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "image": "https://front.dev.malditohard.com.ar/img/migration/APPLE-WATCH-SERIE-SE-44MM-RELOJ-SILVER.webp",
     "stock": 22,
     "condition": "new",
-    "price": 2432
+    "price": 432
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "image": "https://front.dev.malditohard.com.ar/img/migration/Impresora-HP-Deskjet-Advantage-2375.webp",
     "stock": 2,
     "condition": "new",
-    "price": 234
+    "price": 134
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "image": "https://front.dev.malditohard.com.ar/img/migration/APPLE-WATCH-SERIE-3-RELOJ-42MM-SPACE-GREY-GPS.webp",
     "stock": 3,
     "condition": "new",
-    "price": 2342
+    "price": 342
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_882160-MLA47775355993_102021-F.webp",
     "stock": 7,
     "condition": "new",
-    "price": 2342
+    "price": 949
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "image": "https://front.dev.malditohard.com.ar/img/migration/APPLE-AIRPODS-GENERACION-3-GEN.webp",
     "stock": 14,
     "condition": "new",
-    "price": 46
+    "price": 260
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "image": "https://front.dev.malditohard.com.ar/img/migration/APPLE-WATCH-SERIE-8-41MM-RELOJ-RED.webp",
     "stock": 4,
     "condition": "new",
-    "price": 31456
+    "price": 356
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "image": "https://aremsaprod.vteximg.com.br/arquivos/ids/353775-1000-1000/image-c4aebff59af3460a8fd362de463f6bc5.jpg?v=637983425000730000",
     "stock": 4,
     "condition": "new",
-    "price": 135
+    "price": 235
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "image": "https://aremsaprod.vteximg.com.br/arquivos/ids/403253-500-500/image-f8c02d7d65e34df097e6b57e359ac50b.jpg?v=638151083134600000",
     "stock": 5,
     "condition": "new",
-    "price": 143
+    "price": 443
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "image": "https://aremsaprod.vteximg.com.br/arquivos/ids/405566-1000-1000/image-37a62e119e8a4f31b418769a7f125565.jpg?v=638163037014930000",
     "stock": 6,
     "condition": "new",
-    "price": 134
+    "price": 634
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "image": "https://aremsaprod.vteximg.com.br/arquivos/ids/398246-1000-1000/image-0e2e87803e7d4f8f8bed89d98ec59709.jpg?v=638143238344070000",
     "stock": 6,
     "condition": "new",
-    "price": 134
+    "price": 534
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "image": "https://aremsaprod.vteximg.com.br/arquivos/ids/390043-1000-1000/image-5c790b14abdb411c8e5c7af09405013f.jpg?v=638116505512970000",
     "stock": 7,
     "condition": "new",
-    "price": 3141
+    "price": 241
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "image": "https://aremsaprod.vteximg.com.br/arquivos/ids/390039-1000-1000/image-f4f9b08fe8d24c4bb624f401f21e935a.jpg?v=638116500424370000",
     "stock": 8,
     "condition": "new",
-    "price": 1345
+    "price": 645
   },
   {
     "id": 18,
@@ -159,6 +159,6 @@
     "image": "https://www.apple.com/newsroom/images/product/os/ios/standard/Apple_ios14-app-library-screen_06222020_inline.jpg.large.jpg",
     "stock": 8,
     "condition": "new",
-    "price": 345
+    "price": 645
   }
 ]

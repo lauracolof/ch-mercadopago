@@ -1,7 +1,8 @@
+const express = require('express');
 const app = express();
 const routes = require('./routes');
 
-app.use(express.json());
+app.use(express.json())
 app.use(express.urlencoded({ extended: false })) // form;
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*') //authorization to recieve petitions from all domains
@@ -13,7 +14,7 @@ app.use((req, res, next) => {
   next();
 })
 
-app.get('/', req, res => {
+app.get('/', (req, res) => {
   res.status(200).json({ message: 'MercadoPago ' })
 });
 
