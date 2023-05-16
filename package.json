@@ -1,0 +1,26 @@
+{
+  "name": "ch-mercadopago",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauracolof/ch-mercadopago.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauracolof/ch-mercadopago/issues"
+  },
+  "homepage": "https://github.com/lauracolof/ch-mercadopago#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mercadopago": "^1.5.16",
+    "mongoose": "^7.1.1"
+  }
+}
