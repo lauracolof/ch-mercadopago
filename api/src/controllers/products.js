@@ -33,17 +33,18 @@ function updateStockProducts(productId, amount) {
     if (product.id === productId) {
       product.stock = product.stock - amount;
     };
+    return product;
   });
 };
 
 function getStockProduct(productId) {
   let stock;
-  products.map((product) => {
+  products?.map((product) => {
     if (product.id === productId) {
       stock = product.stock;
     }
   });
-  return stock;
+  return stock !== undefined ? stock : 0;
 };
 
 
