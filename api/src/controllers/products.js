@@ -4,13 +4,12 @@ let products = [];
 
 function postProducts(req, res) {
   try {
-    products = jsonData;
+    products = [...jsonData];
     if (products.length > 0) {
       return res.status(200).json(products);
     } else {
-      return res.status(200).json({ message: `Products not found` });
+      return res.status(400).json({ message: `Products not found` });
     }
-
   } catch (error) {
     return res.status(500).json({ message: error })
   }
@@ -18,19 +17,35 @@ function postProducts(req, res) {
 
 function getAllProducts(req, res) {
   try {
-    products = jsonData;
     if (products.length > 0) {
       return res.status(200).json(products);
     } else {
       return res.status(200).json({ message: `Products not found` });
     }
-
   } catch (error) {
     return res.status(500).json({ message: error })
   }
-}
-
-
+};
 function getProductById(req, res) { }
 
-module.exports = { postProducts, getProductById, getAllProducts };
+function updateStockProducts(productId, amount) {
+  products.map((product) => {
+    if (product.id === productId) {
+      product.stock = product.stock - amount;
+    };
+  });
+};
+
+function getStockProduct(productId) {
+  let stock;
+  products.map((product) => {
+    if (product.id === productId) {
+      stock = product.stock;
+    }
+  });
+  return stock;
+};
+
+
+
+module.exports = { postProducts, getAllProducts, getProductById, updateStockProducts, getStockProduct };
