@@ -28,6 +28,8 @@ function getAllProducts(req, res) {
 };
 function getProductById(req, res) { }
 
+
+//modify stock
 function updateStockProducts(productId, amount) {
   products.map((product) => {
     if (product.id === productId) {
@@ -37,6 +39,7 @@ function updateStockProducts(productId, amount) {
   });
 };
 
+//get stock
 function getStockProduct(productId) {
   let stock;
   products?.map((product) => {

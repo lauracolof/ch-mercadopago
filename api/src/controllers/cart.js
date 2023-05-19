@@ -1,7 +1,7 @@
 const { insufficient_stock, no_products_in_cart } = require('../Config/product_status.js');
 
 let shopping_cart = []; // [{ productId, userId, amount, stock },{ productId, userId, amount, stock }]
-let purchase_orders = [];
+let purchase_orders = []; // here we add the orders
 let orderId = 1;
 const { updateStockProducts, getStockProduct } = require('./products');
 
@@ -115,6 +115,7 @@ function deleteAllCart(req, res) {
   }
 };
 
+//when ypu buying a product, we put into a purchase order
 function buyProducts(req, res) {
   try {
     const { userId, cartCode, total } = req.body;
@@ -135,7 +136,7 @@ function buyProducts(req, res) {
         updateStockProducts(cartCode[x].productId, cartCode[x].amount);
       };
 
-      //clean cart
+      //remove buy products from the cart
       const newCart = shopping_cart.filter((prod) => prod.userId !== userId);
       shopping_cart = newCart;
 
