@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 const BASE_URL = `http://localhost:3001`;
 
+// eslint-disable-next-line react/prop-types
 export default function Card({ product, userId }) {
   const [isFav, setIsFav] = useState(false);
   const [isCart, setIsCart] = useState(false);
@@ -52,7 +53,6 @@ export default function Card({ product, userId }) {
         ) : (
           <button onClick={() => setIsFav(true)}>🤍</button>
         )}
-        ;
       </div>
 
       <div className='body-card'>
@@ -66,7 +66,7 @@ export default function Card({ product, userId }) {
         <h1>U$s {product.price}</h1>
         {isCart ? (
           <button onClick={addCart}>
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon icon={faShoppingCart} className='cartt' />
             Add to cart
           </button>
         ) : (
@@ -76,7 +76,7 @@ export default function Card({ product, userId }) {
               style={{ opacity: 0.5, color: 'blueviolet' }}
             />
             <div></div>
-            Delete
+            Add
           </button>
         )}
       </div>

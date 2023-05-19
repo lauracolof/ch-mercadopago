@@ -9,7 +9,7 @@ export default function ShoppingCart({ userId }) {
   const [cartProduct, setCartProduct] = useState();
   const [amount, setAmount] = useState(true);
   const [cartCode, setCartCode] = useState();
-  const [initPoint, setInitPoint] = useState(null);
+  const [initPoint, setInitPoint] = useState(null); //link to send info to back
   let amountProduct = 1;
   let total = 0;
 
@@ -86,13 +86,13 @@ export default function ShoppingCart({ userId }) {
             </li>
           ))}
       </ul>
-      {initPoint && (
+      {initPoint && ( //this init point redirect to mercadopago
         <div>
           <h2 style={{ color: 'green' }}>Redirect to MercadoPago</h2>
           {(window.location.href = initPoint)}
         </div>
       )}
-      {total != 0 ? (
+      {total != 0 ? ( //show the checkout button only if products are available
         <div>
           <h1 className='total-price'>Total price: ${total}</h1>
           <button onClick={payment} className='checkout-button'>
@@ -100,7 +100,7 @@ export default function ShoppingCart({ userId }) {
           </button>
         </div>
       ) : (
-        <h1 className='total-price'>Empty cart</h1>
+        <h1 className='total-price'>Add some products</h1>
       )}
     </div>
   );

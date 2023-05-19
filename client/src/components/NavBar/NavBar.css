@@ -1,0 +1,33 @@
+nav {
+  background-color: #636262;
+  color: whitesmoke;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px 0px black;
+}
+
+ul {
+  list-style: none;
+  margin-right: 20%;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 20%;
+  padding: 10%;
+}
+
+.home {
+  font-size: 32px;
+  color: white;
+  position: relative;
+  right: 3rem;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}

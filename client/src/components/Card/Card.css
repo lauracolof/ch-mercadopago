@@ -8,9 +8,14 @@
   background-color: gray;
 }
 
-.img {
-  width: 100%;
-  border-radius: 40px;
+img {
+  width: 90%;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #2c2b2b;
 }
 
 .link {
@@ -23,5 +28,10 @@
 };
 
 .footer-card button {
-  font-size: 10px;
+  font-size: 20px;
+}
+
+.cartt {
+  position: absolute;
+  bottom: 1rem;
 }

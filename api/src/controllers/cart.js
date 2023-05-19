@@ -136,7 +136,7 @@ function buyProducts(req, res) {
         updateStockProducts(cartCode[x].productId, cartCode[x].amount);
       };
 
-      //remove buy products from the cart
+      //remove buy products from the cart when the userId
       const newCart = shopping_cart.filter((prod) => prod.userId !== userId);
       shopping_cart = newCart;
 
