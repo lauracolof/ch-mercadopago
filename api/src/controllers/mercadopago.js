@@ -24,12 +24,11 @@ const payment = (req, res) => {
         auto_return: 'approved'
       }
     ]
-  }
-  // is a promise
-  mercadopago.preferences.create(preference)
-    .then((response) => {
-      //response is a {body and init_point}
-      //init point is a route to create payment
+  };
+
+  mercadopago.preferences
+    .create(preference)   // is a promise
+    .then((response) => { //response is a {body} and init_point is a route to create new payments
       res.json({ init_point: response.body.init_point })
     })
     .catch((error) => {

@@ -1,7 +1,17 @@
-CREATE DATABASE payment;
+# PARA el caso de querer usar una db sin utilizar una ORM los pasos a seguir son:
 
-Esquema | Nombre | Tipo | Due±o
+# DB
+
+```sql
+CREATE DATABASE payment;
+```
+
+```
+Esquema |  Nombre  | Tipo  |  Due±o
 ---------+----------+-------+----------
-public | cart | tabla | postgres
-public | products | tabla | postgres
-public | users | tabla | postgres
+ public  | cart     | tabla | postgres
+ public  | products | tabla | postgres
+ public  | users    | tabla | postgres
+```
+
+... ...

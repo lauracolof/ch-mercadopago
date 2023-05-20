@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-const BASE_URL = `http://localhost:3001`;
+const BASE_URL = `http://127.0.0.1/:3001`;
 
 // eslint-disable-next-line react/prop-types
 export default function Card({ product, userId }) {
@@ -12,14 +12,16 @@ export default function Card({ product, userId }) {
   const [isCart, setIsCart] = useState(false);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/store/cart/all/${userId}`).then(({ data }) => {
-      if (!data.message) {
-        const updateCart = data.find(
-          (element) => element.productId === product.id
-        );
-        if (updateCart) setIsCart(true);
-      }
-    });
+    axios
+      .get(`http://localhost:3001/store/cart/all/${userId}`)
+      .then(({ data }) => {
+        if (!data.message) {
+          const updateCart = data.find(
+            (element) => element.productId === product.id
+          );
+          if (updateCart) setIsCart(true);
+        }
+      });
   }, []);
 
   const addCart = () => {
@@ -29,19 +31,23 @@ export default function Card({ product, userId }) {
 
     const productCart = {
       productId: product.id,
-      userId,
+      userId: userId,
       amount: 1,
       stock: product.stock,
     };
 
-    axios.post(`${BASE_URL}/store/cart`, productCart).then((result) => {
-      console.log('Products in home', result.data);
-    });
+    axios
+      .post(`http://localhost:3001/store/cart`, productCart)
+      .then((result) => {
+        console.log('Products in home', result.data);
+      });
     setIsCart(true);
   };
 
   const removeCart = () => {
-    axios.delete(`${BASE_URL}/store/cart/${product.id}`).then((results) => {});
+    axios
+      .delete(`http://localhost:3001/store/cart/${product.id}`)
+      .then((results) => {});
     setIsCart(false);
   };
 
@@ -73,10 +79,9 @@ export default function Card({ product, userId }) {
           <button onClick={removeCart}>
             <FontAwesomeIcon
               icon={faShoppingCart}
-              style={{ opacity: 0.5, color: 'blueviolet' }}
-            />
-            <div></div>
-            Add
+              style={{ opacity: 0.8, color: 'white' }}
+            />{' '}
+            Add to cart
           </button>
         )}
       </div>

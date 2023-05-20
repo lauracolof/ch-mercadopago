@@ -1,22 +1,27 @@
 nav {
   background-color: #636262;
   color: whitesmoke;
+  position: fixed;
+  left: 0rem;
+  top: 0rem;
   display: flex;
-  justify-content: flex-end;
-  padding: 10px;
+  justify-content: space-around;
+  height: 8rem;
+  width: 100%;
   border-radius: 4px;
   box-shadow: 2px 2px 5px 0px black;
 }
 
 ul {
   list-style: none;
-  margin-right: 20%;
+  margin: 1%;
   padding: 0;
   display: flex;
+  position: relative;
+  left: 34rem;
 }
 
 li {
-  margin-right: 20%;
   padding: 10%;
 }
 

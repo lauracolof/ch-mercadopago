@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ShoppingCart.css';
-const BASE_URL = `http://localhost:3001`;
 
 const insufficient_stock = `Product not available or insufficient stock`;
 
+// eslint-disable-next-line react/prop-types
 export default function ShoppingCart({ userId }) {
   const [cartProduct, setCartProduct] = useState();
   const [amount, setAmount] = useState(true);
@@ -14,38 +14,42 @@ export default function ShoppingCart({ userId }) {
   let total = 0;
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/store/cart/all/${userId}`).then((productsId) => {
-      setCartCode(productsId.data);
-      axios.get(`${BASE_URL}/store/product`).then((products) => {
-        const productsCart = products.data.filter((product) => {
-          if (
-            !productsId.data.message &&
-            productsId.data.some((obj) => obj.productId === product.id)
-          ) {
-            return product;
-          }
+    axios
+      .get(`http://localhost:3001/store/cart/all/${userId}`)
+      .then((productsId) => {
+        setCartCode(productsId.data);
+        axios.get(`${BASE_URL}/store/product`).then((products) => {
+          const productsCart = products.data.filter((product) => {
+            if (
+              !productsId.data.message &&
+              productsId.data.some((obj) => obj.productId === product.id)
+            ) {
+              return product;
+            }
+          });
+          setCartProduct(productsCart);
+          return cartProduct;
         });
-        setCartProduct(productsCart);
-        return cartProduct;
       });
-    });
-  }, [amount]);
+  }, [amount, cartProduct, userId]);
 
   const increment = (productId, increment) => {
     const data = { productId, userId, increment };
-    axios.put(`${BASE_URL}/store/cart/stock`, data).then((products) => {
-      if (products.data.message === insufficient_stock) {
-        return alert(insufficient_stock);
-      }
-      setAmount(!amount);
-    });
+    axios
+      .put(`http://localhost:3001/store/cart/stock`, data)
+      .then((products) => {
+        if (products.data.message === insufficient_stock) {
+          return alert(insufficient_stock);
+        }
+        setAmount(!amount);
+      });
   };
 
   const payment = async () => {
     const description = cartProduct.map((elem) => elem.title).toString();
 
     const response = await axios
-      .post(`${BASE_URL}/store/pay`, {
+      .post(`http://localhost:3001/store/pay`, {
         description,
         amount: total,
       })

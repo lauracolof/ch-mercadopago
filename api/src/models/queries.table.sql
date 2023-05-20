@@ -1,3 +1,3 @@
 CREATE DATABASE payment;
 
-c/payment
+c\ payment;

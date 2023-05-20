@@ -14,6 +14,7 @@ function amountStockCart(req, res) {
       shopping_cart?.map((e, i) => {
         if (e.productId === productId && e.userId === userId) {
           if (stock && increment && e.amount < stock) {
+            // console.log(':: Stock ::', stock)
             e.amount += 1; //increment amount
             return res
               .status(200)
@@ -78,28 +79,13 @@ function getAll(req, res) {
   }
 }
 
-// function deleteProduct(req, res) {
-//   try {
-//     const { id } = req.params;
-//     if (id) {
-//       const newCart = shopping_cart.filter((e) => e.productId !== Number(id));
-//       shopping_cart = newCart;
-//       return res.status(200).json(product);
-//     } else {
-//       return res.status(404).json({ message: `Products not found` });
-//     }
-//   } catch (error) {
-//     return res.status(500).json({ message: error })
-//   }
-// }
-
 
 function deleteAllCart(req, res) {
   try {
     const { id } = req.params;
     if (id) {
-      const newCart = shopping_cart.filter((e) =>
-        e.productId !== Number(id)
+      const newCart = shopping_cart.filter((elem) =>
+        elem.productId !== Number(id)
       );
       shopping_cart = newCart;
       return res
@@ -115,11 +101,10 @@ function deleteAllCart(req, res) {
   }
 };
 
-//when ypu buying a product, we put into a purchase order
+//when you buying a product, we put into a purchase order
 function buyProducts(req, res) {
   try {
-    const { userId, cartCode, total } = req.body;
-    // cartCode -> [{productId: 1, amount: 2, price_by_unit: 345}, {...}]
+    const { userId, cartCode, total } = req.body; // cartCode -> [{productId: 1, amount: 2, price_by_unit: 345}, {...}]
     if (userId && cartCode && total) {
       const newOrder = {
         id: orderId,
